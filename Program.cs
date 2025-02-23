@@ -1,86 +1,95 @@
 ﻿using System;
 using static System.Console;
 
-// 1. Kalkulyator:
-// Foydalanuvchidan ikkita raqam va operatsiyani (+, -, *, /) so'raydigan kalkulyator dasturini yozing va keyin operatsiya natijasini chop eting.
-// Input = 5;
-// Input = +;
-// Input = 5;
-// Output = 10;
+// 1. Tub sonlar: Foydalanuvchidan kiritilgan sonning tub son ekanligini tekshiruvchi dastur tuzing. Agar kiritilgan son tub bo'lsa, "Tub" degan xabar chiqaring, aks holda "Tub emas" degan xabar chiqaring. 
+// Input = 7; 
+// Output = “Tub”
 
 WriteLine("====== 1-Masala ======");
-Write("Enter the first number: ");
-double firstNumber = Convert.ToDouble(ReadLine());
-
-Write("Iltimos ishorani tanlang: +, -, *, / : ");
-char ishora = Convert.ToChar(ReadLine());
-
-Write("Enter the second number: ");
-double secondNumber = Convert.ToDouble(ReadLine());
-
-double natija = 0;
-
-switch (ishora)
-{
-    case '+':
-        natija = firstNumber + secondNumber;
-        break;
-    case '-':
-        natija = firstNumber - secondNumber;
-        break;
-    case '*':
-        natija = firstNumber * secondNumber;
-        break;
-    case '/':
-        natija = firstNumber / secondNumber;
-        break;
-}
-
-WriteLine($"Answer: {natija}");
 
 
 
 
-// 2. Raqamlar qatorining yig‘indisini hisoblash:
-// Foydalanuvchidan N musbat butun sonni so‘ragan, so‘ngra 1 dan N gacha bo‘lgan barcha sonlar yig‘indisini hisoblab, natijani ekranga chiqaradigan dastur tuzing.
-// Input = 10;
-// Output = 55;
+
+
+
+
+
+
+
+
+
+
+// 2. Bo'luvchisiz sonlar: Foydalanuvchidan son qabul qilib, shu sonni 2 dan boshlab 10 gacha bo'lgan bo'luvchilarini hisoblovchi dastur yozing. Natijani ekranga chiqaring. Input = 20; 
+// Output = "Bo'luvchilari: 2, 4, 5, 10"
 
 WriteLine("\n====== 2-Masala ======");
-Write("N musbat sonini kiriting: ");
-int N = Convert.ToInt32(ReadLine());
-
-if (N < 1)
-{
-    WriteLine("N soni musbat bo'lishi kerak.");
-    return;
-}
-
-int yigindi = 0;
-for (int i = 1; i <= N; i++)
-{
-    yigindi += i;
-}
-
-WriteLine($"1 dan {N} gacha bo‘lgan sonlar yig‘indisi: {yigindi}");
 
 
 
 
-// 3.  Paritet tekshiruvi:
-// Foydalanuvchi kiritgan raqamning juft yoki toq ekanligini aniqlaydigan va shunga mos ravishda xabarni chiqaradigan dastur tuzing.
-// Input = 3;
-// Output = “Toq”
+
+
+
+
+
+
+
+// 3. Daraja hisoblash: Foydalanuvchidan son va uning darajasini qabul qilib, berilgan sonni berilgan darajaga ko'taradigan dastur tuzing. Daraja musbat butun son bo'lishi kerak. 
+// Input = 3, 4;
+//  Output = 81
 
 WriteLine("\n====== 3-Masala ======");
-Write("Sonni kiriting: ");
-int son = Convert.ToInt32(ReadLine());
 
-if (son % 2 == 0)
-{
-    WriteLine("Juft");
-}
-else
-{
-    WriteLine("Toq");
-}
+
+
+
+
+
+
+
+
+
+
+
+// 4. Harajatlar to'plamini hisoblash: Foydalanuvchidan bir nechta to'plam miqdorlar kiritilgan holda, ularni qo'shib yig'indisini hisoblovchi dastur yozing va natijani ekranga chiqaring. 
+// Input = [150, 230, 80, 120]; 
+// Output = 580
+
+WriteLine("\n====== 4-Masala ======");
+
+
+
+
+
+
+
+
+
+
+
+// 5. Armstrong sonlar: Foydalanuvchidan son qabul qilib, shu sonni Armstrong son ekanligini aniqlang. Armstrong son, raqamlarining darajasiga mos keladigan sonlardir. Masalan: 
+// Input = 153; 
+// Output = "153 Armstrong son" 
+// 153 raqamining raqamlarini darajaga olib, o'lchamalarga ko'paytirib qo'ygan holda, 1^3 + 5^3 + 3^3 = 1 + 125 + 27 = 153 bo'ladi. Bu sababli, 153 raqami Armstrong son hisoblanadi.
+
+WriteLine("\n====== 5-Masala ======");
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 6. Sifatli bo'luvchilar: Foydalanuvchidan son qabul qilib, shu sonni nechta sifatli bo'luvchilarini hisoblang. Sifatli bo'luvchilar, faqat bittadan o'zidan keyincha bo'lan sonlar hisoblanadi. Masalan: 
+// Input = 20; 
+// Output = 4 
+// 20 raqamining sifatli bo'luvchilari 1, 2, 4, va 5 sonlari hisoblanadi.
+
+WriteLine("\n====== 6-Masala ======");
