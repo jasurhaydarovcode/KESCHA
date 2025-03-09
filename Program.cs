@@ -1,20 +1,50 @@
 ﻿using System;
+using KESCHA.Classes;
 using static System.Console;
 
-Write("Enter your name: ");
-string name = ReadLine();
-string greating = $"Hello {name}";
-WriteLine(greating);
+class Program
+{
+    static void Main()
+    {
+        Write("Enter your name: ");
+        string name = ReadLine();
+        WriteLine($"Hello, {name}!");
 
-Write("Enter your age: ");
-int age = Convert.ToInt32(ReadLine());
+        Write("Enter your age: ");
+        string ageAsString = ReadLine();
+        WriteLine("Converting your age to an integer...");
 
-int keschasAge = 4;
-int ageDiffernce = age - keschasAge;
-WriteLine("Sizning yoshingiz Kesshani yoshidan {0} ga farq qiladi.", ageDiffernce);
+        int age = Convert.ToInt32(ageAsString);
+        WriteLine($"Successfully converted! Your age: {age}");
 
-WriteLine($"Kesha sizdan katta: {keschasAge > age}");
-WriteLine($"Siz keshadan kattasiz: {keschasAge < age}");
-WriteLine($"Siz Kessha bilan tengsiz: {keschasAge == age}");
-WriteLine($"Siz Kesshadan kattasiz yoki tengsiz: {keschasAge <= age}");
-WriteLine($"Kessha siz bilan teng emas: {keschasAge != age}");
+        Animal kescha = new Animal(name: "Kescha", userAge: age, animalAge: 3);
+
+        // WriteLine(kescha.Name);
+        // WriteLine(kescha.Age);
+
+        WriteLine($"The difference between your age and Kescha's age is {kescha.AgeDifference} years.");
+
+        if (age > kescha.Age)
+        {
+            WriteLine("You are older!");
+        }
+        else if (age == kescha.Age)
+        {
+            WriteLine("You and Kescha are the same age!");
+        }
+        else
+        {
+            WriteLine("You are younger!");
+        }
+
+        WriteLine("\nLet me tell you about my friends.");
+
+        string[] friendsNames = { "Asliddin", "Sarvinoz", name };
+        int[] friendsAges = { 16, 19, age };
+
+        for (int i = 0; i < friendsNames.Length; i++)
+        {
+            WriteLine($"{friendsNames[i]} is {friendsAges[i]} years old!");
+        }
+    }
+}
