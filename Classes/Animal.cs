@@ -16,10 +16,20 @@ namespace KESCHA.Classes
         public Animal(
             string name,
             int userAge,
-            int animalAge
-        )
+            int animalAge)
         {
             Name = name;
+            // AgeDifference = CalculateAgeDifference(userAge, animalAge);
+            CalculateAgeDifferenceWithNoReturn(userAge, animalAge);
+        }
+
+        private int CalculateAgeDifference(int userAge, int animalAge)
+        {
+            return userAge - animalAge;
+        }
+
+        private void CalculateAgeDifferenceWithNoReturn(int userAge, int animalAge)
+        {
             AgeDifference = userAge - animalAge;
         }
     }
