@@ -1,3 +1,5 @@
+using static System.Console;
+
 namespace KESCHA.Classes
 {
     class Animal
@@ -21,6 +23,27 @@ namespace KESCHA.Classes
             Name = name;
             // AgeDifference = CalculateAgeDifference(userAge, animalAge);
             CalculateAgeDifferenceWithNoReturn(userAge, animalAge);
+        }
+
+        public void PrintAgeDifference()
+        {
+            WriteLine($"The difference between your age and {Name}'s age is {AgeDifference} years.");
+        }
+
+        public void CompareAges(int userAge)
+        {
+            if (userAge > Age)
+            {
+                WriteLine("You are older!");
+            }
+            else if (userAge == Age)
+            {
+                WriteLine("You and Kescha are the same age!");
+            }
+            else
+            {
+                WriteLine("You are younger!");
+            }
         }
 
         private int CalculateAgeDifference(int userAge, int animalAge)

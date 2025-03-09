@@ -22,20 +22,8 @@ class Program
         // WriteLine(kescha.Name);
         // WriteLine(kescha.Age);
 
-        WriteLine($"The difference between your age and Kescha's age is {kescha.AgeDifference} years.");
-
-        if (age > kescha.Age)
-        {
-            WriteLine("You are older!");
-        }
-        else if (age == kescha.Age)
-        {
-            WriteLine("You and Kescha are the same age!");
-        }
-        else
-        {
-            WriteLine("You are younger!");
-        }
+        kescha.PrintAgeDifference();
+        kescha.CompareAges(userAge: age);
 
         WriteLine("\nLet me tell you about my friends.");
 
