@@ -15,6 +15,12 @@ namespace KESCHA.Classes
             AgeDifference = 0;
         }
 
+        public Animal(string name, int age)
+        {
+            Age = age;
+            Name = name;
+        }
+
         public Animal(
             string name,
             int userAge,
@@ -46,9 +52,36 @@ namespace KESCHA.Classes
             }
         }
 
-        private int CalculateAgeDifference(int userAge, int animalAge)
+        public void TellAboutFriends(string userName, int userAge)
+        {
+            WriteLine("\nLet me tell you about my friends.");
+
+            string[] friendsNames = { "Asliddin", "Sarvinoz", userName };
+            int[] friendsAges = { 16, 19, userAge };
+
+            for (int i = 0; i < friendsNames.Length; i++)
+            {
+                WriteLine($"{friendsNames[i]} is {friendsAges[i]} years old!");
+            }
+        }
+
+        public void CalculateAgeDifferenceWithNoReturn(int userAge)
+        {
+            AgeDifference = userAge - Age;
+        }
+
+        public int CalculateAgeDifference(int userAge, int animalAge)
         {
             return userAge - animalAge;
+        }
+
+        public void Greet(string userName)
+        {
+            if (userName == "")
+            {
+                userName = "Unknown Person";
+            }
+            WriteLine($"Hello, {userName}!");
         }
 
         private void CalculateAgeDifferenceWithNoReturn(int userAge, int animalAge)
